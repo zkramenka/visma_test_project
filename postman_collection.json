@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "df60a2e8-8d78-40e4-9b5c-557283310ab1",
+		"name": "Visma",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19892668"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/meeting",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/meetings/2?requester=Marius",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"meetings",
+						"2"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "requester",
+							"value": "Marius"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/meetings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jono Java meetas\",\r\n    \"responsiblePerson\": \"Jonas\",\r\n    \"description\": \"Java pamokele\",\r\n    \"category\" : \"TEAMBUILDING\",\r\n    \"type\" : \"INPERSON\",\r\n    \"startDate\" : \"2019-04-03\",\r\n    \"endDate\" : \"2019-04-03\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/meetings",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"meetings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/meetings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Mariaus Python meetas\",\r\n    \"responsiblePerson\": \"Marius\",\r\n    \"description\": \"Python Discussion\",\r\n    \"category\" : \"CODEMONKEY\",\r\n    \"type\" : \"LIVE\",\r\n    \"startDate\" : \"2019-04-03\",\r\n    \"endDate\" : \"2019-04-04\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/meetings",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"meetings"
+					]
+				},
+				"description": "Mariaus meetas\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/meetings/1/addAttendee?attendee=Dominykas",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/meetings/1/addAttendee?attendee=Marius",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"meetings",
+						"1",
+						"addAttendee"
+					],
+					"query": [
+						{
+							"key": "attendee",
+							"value": "Marius"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/meetings/1/removeAttendee?attendee=Dominykas",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/meetings/1/removeAttendee?attendee=Marius",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"meetings",
+						"1",
+						"removeAttendee"
+					],
+					"query": [
+						{
+							"key": "attendee",
+							"value": "Marius"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/meetings",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/meetings?description=java&responsiblePerson=Jonas&category=CODEMONKEY&type=LIVE&startDate=2019-04-03&endDate=2019-04-04&minAttendees=1&maxAttendees=3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"meetings"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "java"
+						},
+						{
+							"key": "responsiblePerson",
+							"value": "Jonas"
+						},
+						{
+							"key": "category",
+							"value": "CODEMONKEY"
+						},
+						{
+							"key": "type",
+							"value": "LIVE"
+						},
+						{
+							"key": "startDate",
+							"value": "2019-04-03"
+						},
+						{
+							"key": "endDate",
+							"value": "2019-04-04"
+						},
+						{
+							"key": "minAttendees",
+							"value": "1"
+						},
+						{
+							"key": "maxAttendees",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
